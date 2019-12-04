@@ -1,0 +1,181 @@
+
+Formato RAW
+¿Qué es el formato RAW?
+Por lo tanto, “RAW” no es un tipo del sistema de archivos en su concepto general, sino representa un símbolo de la incertidumbre de un sistema de archivos específico del dispositivo. Cualquier sistema de archivos tiene un modo determinante ordenado de organización, almacenamiento y marcaje de datos en los medios de almacenamiento, que define el formato del contenido y establece el conjunto de atributos de los archivos utilizados. Si los controladores del sistema operativo “Windows” no pueden identificar y correlacionar un sistema de archivos de un dispositivo de memoria con los formatos conocidos de nombres, dicho dispositivo se etiquetará como “RAW”. A menudo, esto significa que una unidad «flash USB» o tarjeta de memoria recibió un cierto tipo de daño en el nivel del sistema de archivos y no responde a las solicitudes del sistema operativo.
+Causas 
+Las causas por las que se da este tipo de error en las Memorias micro SD o Flash USB es por: 
+Cambios abruptos del nivel de la tensión en la red eléctrica, su ausencia o interrupción de grabación de datos al dispositivo o del proceso de lectura, fallo en el funcionamiento del sistema operativo o algunas aplicaciones en el proceso de uso de los dispositivos.
+Cuando el sistema de archivos está dañado por un virus.
+La distorsión del dispositivo o la influencia excesiva forzosa en el proceso de su conexión o retiro del conector del ordenador, desconexión de la unidad USB y la tarjeta de memoria antes del final del proceso de lectura o grabación, interrupción del procedimiento de formateo del dispositivo antes de su terminación completa, la extracción insegura
+Síntomas
+A menudo, el formato la designación del dispositivo con el formato «RAW» es una señal segura de un error o de un problema en el funcionamiento de la unidad «flash USB» o la tarjeta de memoria.
+Primer síntoma en la memoria Micro SD o Flash USB es: Que acceder a una tarjeta de memoria, el sistema te solicite formatéala para poder acceder a ella.
+Segundo síntoma es que cuando accedamos a las propiedades de la memoria nos muestre espacio usado es de 0 bytes y el espacio disponible es de 0 bytes.
+Otro síntoma para confirmar que esta en formato RAW, es que vayas a “Este equipo” en tu biblioteca, sobre este des clic derecho, Administrar, te dirijas a administrador de discos, y veas en ese lugar que tu memoria tiene ese formato: “RAW”
+Restauración de la Memoria Micro SD o USB
+Con la forma CHKDSK
+Se puede iniciar la aplicación «CHKDSK» desde el símbolo de sistema ejecutada con los derechos de administrador.
+En la ventana del símbolo del sistema que se abre con derechos de administrador, ingrese el siguiente comando:
+chkdsk F: /f /r
+El comando iniciará la ejecución de la aplicación “CHKDSK” para el apartado “F:” (en nuestro ejemplo), y los indicadores “/f” y “/r” establecerán respectivamente los parámetros de acciones, destinados a diagnosticar la unidad «flash USB» o la tarjeta de memoria, buscar los errores y su corrección automática, así como la búsqueda, la identificación y el marcaje de los sectores defectuosos con la restauración posterior de su contenido.
+Sin embargo, no siempre es posible lograr la recuperación de la capacidad funcional completa de la unidad” USB-flash” y la tarjeta de memoria “SD, MicroSD” de la manera indicada. Existencia de ciertos tipos de daños puede provocar rechazo de la aplicación “CHKDSK” a realizar el procedimiento de búsqueda y reparación de fallos en el dispositivo de almacenamiento. Por ejemplo, si la información sobre el sistema de archivos que se almacena en la tabla de los apartados del registro principal de inicio «MBR» y los sectores de inicio, estará dañada o ausente, entonces la aplicación «CHKDSK» no podrá eliminar el fallo del dispositivo, y mostrará el mensaje correspondiente: “CHKDSK no está disponible para unidades RAW”.
+Realización del formateo del dispositivo problemático:
+El cual se accederá al CMD en Windows, la cual se ejecutará el comando diskpart
+Te emergerá otra ventana, que será la de DISKPART, en esa colocaras, “list disk”, 
+Posterior te saldrá la lista de discos que tengas en la computadora conectados, incluido el disco duro de la misma, posteriormente teclearas “select disk“el numero de la memoria que este dañada (de ello te enteraras ya que la memoria posera menor almacenaje que el disco duro)”, una vez seleccionada, colocaras “clean”, para formatearla totalmente, cuando termine de formatearse, volverás a seleccionar el disco con el mismo número , luego colocaras “create partition primary” esto creara la partición primaria de la memoria, posterior asignaras el formato de la memoria con el comando “format fs=(ya sea FAT32, NTFS o exFAT) ”, y tendrás que esperar que se ha complete este proceso, colocaras el comando “assign” el cual assignara una letra a la USB o MicroSD. 
+De esa manera se arreglaría el problema solo que se perderían los datos.
+RECUPERAICON DE ARCHIVOS 
+La mejor solución de software para recuperar los archivos desde una unidad flash «RAW» o una tarjeta de memoria es el producto de la compañía “Hetman Software” bajo la denominación “Hetman Partition Recovery”.
+El programa cuenta con las posibilidades más amplias, gracias a las cuales recupera fácilmente los datos no solamente de las unidades dañadas, inaccesibles e ilegibles.
+El asistente de recuperación te explicara paso a paso como instalar el software, por lo que la instalación del producto no lleva mucho tiempo y es intuitivamente comprensible, incluso para los usuarios novatos.
+Al finalizar la instalación, ejecute “Hetman Partition Recovery”, que realizará el escaneo primario del sistema e identificará todos los dispositivos de almacenamiento conectados.
+Tras la ejecución del proceso de análisis y recuperación, todos los archivos detectados se presentarán en la ventana del programa. Los usuarios podrán ver el contenido de cada uno de sus archivos para su posterior selección y almacenamiento.
+Al mover los archivos que le gusten al apartado “Lista de recuperación», haga clic en el botón «Recuperar» y seleccione en la ventana de vista previa las formas de guardar los archivos marcados.
+En el programa están disponibles a la elección varias opciones para guardar archivos: guardar los datos en cualquier disco duro interno o unidad externa, grabar los archivos a un disco óptico “CD” o “DVD”, crear una imagen virtual de datos ISO o cargar los archivos a la red «Internet» a través de “Cliente FTP”, el cual selecciona el que desees.
+
+ 
+Manual Reparador.bat
+Código
+@echo off
+color 1A
+title=Desocultador carpetas y archivos
+echo Este es un ejecutador que sirve para desocultar archivos ocultos.
+echo Creado por OMAR ARANDA ALAMARAZ 
+echo TECNOLOGICO DE ESTUDIOS SUPERIORES DE JILOTEPEC 
+echo Grupo 3011
+echo.
+echo.
+set/p U=Cual es la unidad por reparar?
+echo.
+echo Espere un momento porfavor
+%U%: 
+attrib -s -h /s /d
+echo.
+echo Finalizado 
+echo.
+pause
+
+Explicación 
+El comando “color 1A”, es aquel que le da colores distintos a la letra y fondo del CMD, el cual el 1 es el color de la letra mientras que la letra “A” es aquella que asigna el color a l fondo .
+El comando “title”, es aquel que en la barra de la parte superior cambia el nombre, por lo que en vez de decir la dirección de donde se ejecuta el CMD, dirá “Desocultador carpetas y archivos”.
+El comando “echo” nos sirve para mandar las instrucciones que queremos en pantalla, como las que se ven en el código como:
+•	echo Este es un ejecutador que sirve para desocultar archivos ocultos.
+•	echo Creado por OMAR ARANDA ALAMARAZ 
+•	echo TECNOLOGICO DE ESTUDIOS SUPERIORES DE JILOTEPEC 
+•	echo Grupo 3011
+•	echo Espere un momento porfavor
+•	echo Finalizado 
+El siguiente comando es “set/p U=”, el cual en este comando lo que damos ordenes que la letra “U” se guarde el valor que nosotros tecleamos atreves del mensaje que está enfrente del mensaje.
+El comando “pause” es para que, en la ejecución del programa, no sea corrida sino haga una pausa, el cual muestre un mensaje que presione una tecla para continuar.
+El comando “echo.” es para hacer saltos de párrafo
+El comando “%U%: “es para que la letra que selecciona el usuario realice la acción que nosotros hacemos cuando lo hacemos de manera manual, por ejemplo “F:”.
+Después de ello se ejecutará el código “attrib -s -h /s /d” ya con la dirección de la unidad 
+Por ultimo se manda el mensaje Finalizado y seleccionas una tecla para terminar el proceso.
+
+Funcionamiento 
+Para mostrar el funcionamiento del scrip, en este caso tomaremos una memoria con archivos ocultos.
+  
+Como le ven en la imagen anterior se ve que la memoria tiene pocos archivos
+Pero cuando la abrimos 
+ 
+Vemos que no hay ningún archivo por lo que al ejecutar el programa él se abrirá una pantalla, con el nombre de “Desocultador carpetas y archivos”, el cual tendrá un color de fondo azul con letras verdes, el cual como primeros mensajes saldrá, el creador y la unidad que desean reparar. 
+ 
+Delante de este último tendrás que colocar la letra de la unidad y dar un enter 
+ 
+El cual lanzara el siguiente mensaje:
+“Espere un momento porfavor”
+ 
+Una vez que el proceso termine, el del comando attrib.
+Te lanzara estos otros Mensajes
+“Finalizado”
+“Presione una tecla para continuar . . .”
+Y como lo dice al final, presionas una tecla y se cerrara la ventana.
+ 
+En caso de no colocar la letra adecuada, una hará el proceso si es una letra valida, como puede ser la C, G, D, F; pero en caso de que no sea una letra valida enviara el mensaje:
+“El sistema no puede encontrar el controlador especificado.” O "(Lo que haya escrito en vez de la letra):" no se reconoce como un comando interno o externo, programa o archivo por lotes ejecutable.
+Finalmente, se desocultaran nuestros archivos de la memoria.
+ 
+
+ 
+Cambiar el icono de un archivo.bat
+Para poder cambiar el icono de un archivo.bat.
+Lo primero que se tiene que hacer es crear un acceso directo de este:
+ 
+Luego una vez creado el acceso, sobre este das clic derecho sobre él, propiedades.
+ 
+Y en esta ventana dirigirse a la parte interior y dar clic en la opción cambiar icono.
+  
+En esa opción se te mostraran varios iconos de Windows, o puedes colocarle tu uno personalizado.
+ 
+Finalmente seleccionas tu icono y listo
+
+
+
+Temporizador y sonido Audible
+Par el temporizador tuvimos que hacer una pequeña aplicación para este, lo cual lo programamos desde NetBeans.
+Primero creamos un proyecto.
+ 
+Posteriormente le dimos nombre y lo guardamos, luego ingresamos a nuestro paquete principal y creamos JFrameForm.
+ 
+Luego una vez creado, se realiza el diseño como se supone que se va mostrar nuestro temporizador en este caso.
+ 
+Una vez realizado el diseño, nos dirigiremos al apartado de source donde programaremos cada número colocado en el apartado de diseño y colocaremos la importación de los botones, sonido, color de fondo.
+ 
+Posteriormente pasamos a realizar el código, creando un par de métodos públicos, en este caso con el nombre de ejecutar y otro sonar, el cual colocaremos los sonidos.
+ 
+Y en estas clases colocaremos un par de comandos que el de Clip y String ruta, el cual estos comandos están dedicados para la reproducción del sonidos, como el “this.getContentPane().setBackground(Color, Light_GRAY);” el cual ese comando nos servirá para ponerle color de fondo al temporizador, y finalmente el comando new, es para mandar una instrucción a nuestra método principal, de tal manera que se muestre en si el temporizador.
+ 
+Finalmente se presenta el código que realizara que el temporizador funcione el cual manda a llamar los diferentes métodos y las etiquetas que realizaran el cambio de números.
+ 
+Para que hable Cortana.
+Para poder hacer que hable Cortana, el asistente de Microsoft, tenemos que ocupar una pequeña serie de comandos el cual tenemos que ingrsarlos en un bloc de notas, que posteriormente tendremos que guardar como archivo.vbs, el cual al ejecutar este vbs automáticamente hablara Cortana, de acuerdo con lo que le hayamos escrito.
+ La serie de comandos son:
+StrText=("En este espacio se coloca lo que quieres que diga Cortana")
+set objvoice= CreateObject("SAPI.SpVoice")
+ObjVoice.speak StrText
+
+
+
+Cambio de Fuente
+
+El cambio de fuente de Windows, al igual que lo anterior, con una serie de comandos que al colocarlos en un bloc de notas, y guardarlos ahora en un archivo.reg, el cual la serie de comandos es:
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts]
+"Segoe UI (TrueType)"=""
+"Segoe UI Bold (TrueType)"=""
+"Segoe UI Bold Italic (TrueType)"=""
+"Segoe UI Italic (TrueType)"=""
+"Segoe UI Light (TrueType)"=""
+"Segoe UI Semibold (TrueType)"=""
+"Segoe UI Symbol (TrueType)"=""
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes]
+"Segoe UI"="Tahoma"
+
+ 
+Encender la cámara web sin que el usuario se dé cuenta.
+Para ello necesitamos una aplicación para poder realizar este proceso, y antes debemos desactivar nuestro antivirus ya que si la ejecutamos sin desactivar nuestro antivirus, esta borrara la aplicación.
+Una vez desactivando el antivirus, ejecutamos la aplicación llamada Cammy.
+Posteriormente das permisos.
+
+
+Y se te abrirá una ventana el cual parecerá como una tabla.
+ 
+En ella le darás build el cual, al darle esa opción se te abrirá la ventana con las opciones de Hot, port, build y cancel.
+
+
+
+
+En ella en el apartado Host, colocaras la IP de tu computadora ya que con ella te llegara a tu computadora la señal de la cámara, si no sabes tú IP, te diriges a simbolos del sistema, colocas el código ipconfig, y copias los numero de IPV4P
+Una vez colocada la IP seleccionas Build en la misma ventana, posteriormente se te aparecerá un cuadro para que guardes un par de archivos el cual te va a generar, seleccionas tu ruta donde los vas a guardar.
+ 
+Después de eso te va generar unos archivos:
+Pero el que nos interesa realmente es el ejecutable que nos creó, ya que este cuando lo ejecutemos no va a pasar nada, pero en nuestra computadora a distancia nos va avisar si alguien ejecuto la aplicación.
+
+El cual al abrir el cammy en la tabla se nos va a aparecer quien se conectó:
+
+
+
+Y con ello podemos acceder a la cámara y pantalla de escritorio de la computadora en el que se ejecuto el archivo.
+
+Color del mensaje.
+Para cambiar el color del mensaje lo que tienes que hacer es ir configuración del equipo, a personalización, en ese apartado te vas a colores y seleccionas el color de tema.
