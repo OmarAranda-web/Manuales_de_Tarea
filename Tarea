@@ -72,25 +72,20 @@ El comando “%U%: “es para que la letra que selecciona el usuario realice la 
 Después de ello se ejecutará el código “attrib -s -h /s /d” ya con la dirección de la unidad 
 Por ultimo se manda el mensaje Finalizado y seleccionas una tecla para terminar el proceso.
 
+
 Funcionamiento 
-Para mostrar el funcionamiento del scrip, en este caso tomaremos una memoria con archivos ocultos.
-  
+Para mostrar el funcionamiento del scrip, en este caso tomaremos una memoria con archivos ocultos.  
 Como le ven en la imagen anterior se ve que la memoria tiene pocos archivos
-Pero cuando la abrimos 
- 
-Vemos que no hay ningún archivo por lo que al ejecutar el programa él se abrirá una pantalla, con el nombre de “Desocultador carpetas y archivos”, el cual tendrá un color de fondo azul con letras verdes, el cual como primeros mensajes saldrá, el creador y la unidad que desean reparar. 
- 
-Delante de este último tendrás que colocar la letra de la unidad y dar un enter 
- 
+Pero cuando la abrimos  
+Vemos que no hay ningún archivo por lo que al ejecutar el programa él se abrirá una pantalla, con el nombre de “Desocultador carpetas y archivos”, el cual tendrá un color de fondo azul con letras verdes, el cual como primeros mensajes saldrá, el creador y la unidad que desean reparar.  
+Delante de este último tendrás que colocar la letra de la unidad y dar un enter  
 El cual lanzara el siguiente mensaje:
 “Espere un momento porfavor”
- 
 Una vez que el proceso termine, el del comando attrib.
 Te lanzara estos otros Mensajes
 “Finalizado”
 “Presione una tecla para continuar . . .”
-Y como lo dice al final, presionas una tecla y se cerrara la ventana.
- 
+Y como lo dice al final, presionas una tecla y se cerrara la ventana. 
 En caso de no colocar la letra adecuada, una hará el proceso si es una letra valida, como puede ser la C, G, D, F; pero en caso de que no sea una letra valida enviara el mensaje:
 “El sistema no puede encontrar el controlador especificado.” O "(Lo que haya escrito en vez de la letra):" no se reconoce como un comando interno o externo, programa o archivo por lotes ejecutable.
 Finalmente, se desocultaran nuestros archivos de la memoria.
@@ -99,32 +94,22 @@ Finalmente, se desocultaran nuestros archivos de la memoria.
  
 Cambiar el icono de un archivo.bat
 Para poder cambiar el icono de un archivo.bat.
-Lo primero que se tiene que hacer es crear un acceso directo de este:
- 
-Luego una vez creado el acceso, sobre este das clic derecho sobre él, propiedades.
- 
-Y en esta ventana dirigirse a la parte interior y dar clic en la opción cambiar icono.
-  
-En esa opción se te mostraran varios iconos de Windows, o puedes colocarle tu uno personalizado.
- 
+Lo primero que se tiene que hacer es crear un acceso directo de este: 
+Luego una vez creado el acceso, sobre este das clic derecho sobre él, propiedades. 
+Y en esta ventana dirigirse a la parte interior y dar clic en la opción cambiar icono.  
+En esa opción se te mostraran varios iconos de Windows, o puedes colocarle tu uno personalizado. 
 Finalmente seleccionas tu icono y listo
 
 
 
 Temporizador y sonido Audible
 Par el temporizador tuvimos que hacer una pequeña aplicación para este, lo cual lo programamos desde NetBeans.
-Primero creamos un proyecto.
- 
-Posteriormente le dimos nombre y lo guardamos, luego ingresamos a nuestro paquete principal y creamos JFrameForm.
- 
-Luego una vez creado, se realiza el diseño como se supone que se va mostrar nuestro temporizador en este caso.
- 
+Primero creamos un proyecto. 
+Posteriormente le dimos nombre y lo guardamos, luego ingresamos a nuestro paquete principal y creamos JFrameForm. 
+Luego una vez creado, se realiza el diseño como se supone que se va mostrar nuestro temporizador en este caso. 
 Una vez realizado el diseño, nos dirigiremos al apartado de source donde programaremos cada número colocado en el apartado de diseño y colocaremos la importación de los botones, sonido, color de fondo.
- 
 Posteriormente pasamos a realizar el código, creando un par de métodos públicos, en este caso con el nombre de ejecutar y otro sonar, el cual colocaremos los sonidos.
- 
 Y en estas clases colocaremos un par de comandos que el de Clip y String ruta, el cual estos comandos están dedicados para la reproducción del sonidos, como el “this.getContentPane().setBackground(Color, Light_GRAY);” el cual ese comando nos servirá para ponerle color de fondo al temporizador, y finalmente el comando new, es para mandar una instrucción a nuestra método principal, de tal manera que se muestre en si el temporizador.
- 
 Finalmente se presenta el código que realizara que el temporizador funcione el cual manda a llamar los diferentes métodos y las etiquetas que realizaran el cambio de números.
  
 Para que hable Cortana.
@@ -156,25 +141,13 @@ Encender la cámara web sin que el usuario se dé cuenta.
 Para ello necesitamos una aplicación para poder realizar este proceso, y antes debemos desactivar nuestro antivirus ya que si la ejecutamos sin desactivar nuestro antivirus, esta borrara la aplicación.
 Una vez desactivando el antivirus, ejecutamos la aplicación llamada Cammy.
 Posteriormente das permisos.
-
-
-Y se te abrirá una ventana el cual parecerá como una tabla.
- 
+Y se te abrirá una ventana el cual parecerá como una tabla. 
 En ella le darás build el cual, al darle esa opción se te abrirá la ventana con las opciones de Hot, port, build y cancel.
-
-
-
-
 En ella en el apartado Host, colocaras la IP de tu computadora ya que con ella te llegara a tu computadora la señal de la cámara, si no sabes tú IP, te diriges a simbolos del sistema, colocas el código ipconfig, y copias los numero de IPV4P
-Una vez colocada la IP seleccionas Build en la misma ventana, posteriormente se te aparecerá un cuadro para que guardes un par de archivos el cual te va a generar, seleccionas tu ruta donde los vas a guardar.
- 
+Una vez colocada la IP seleccionas Build en la misma ventana, posteriormente se te aparecerá un cuadro para que guardes un par de archivos el cual te va a generar, seleccionas tu ruta donde los vas a guardar. 
 Después de eso te va generar unos archivos:
 Pero el que nos interesa realmente es el ejecutable que nos creó, ya que este cuando lo ejecutemos no va a pasar nada, pero en nuestra computadora a distancia nos va avisar si alguien ejecuto la aplicación.
-
 El cual al abrir el cammy en la tabla se nos va a aparecer quien se conectó:
-
-
-
 Y con ello podemos acceder a la cámara y pantalla de escritorio de la computadora en el que se ejecuto el archivo.
 
 Color del mensaje.
