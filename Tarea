@@ -34,7 +34,7 @@ Al mover los archivos que le gusten al apartado “Lista de recuperación», hag
 En el programa están disponibles a la elección varias opciones para guardar archivos: guardar los datos en cualquier disco duro interno o unidad externa, grabar los archivos a un disco óptico “CD” o “DVD”, crear una imagen virtual de datos ISO o cargar los archivos a la red «Internet» a través de “Cliente FTP”, el cual selecciona el que desees.
 
  
-Manual Reparador.bat
+                                                        Manual Reparador.bat
 Código
 @echo off
 color 1A
@@ -54,8 +54,7 @@ echo.
 echo Finalizado 
 echo.
 pause
-
-Explicación 
+    Explicación 
 El comando “color 1A”, es aquel que le da colores distintos a la letra y fondo del CMD, el cual el 1 es el color de la letra mientras que la letra “A” es aquella que asigna el color a l fondo .
 El comando “title”, es aquel que en la barra de la parte superior cambia el nombre, por lo que en vez de decir la dirección de donde se ejecuta el CMD, dirá “Desocultador carpetas y archivos”.
 El comando “echo” nos sirve para mandar las instrucciones que queremos en pantalla, como las que se ven en el código como:
@@ -72,12 +71,9 @@ El comando “%U%: “es para que la letra que selecciona el usuario realice la 
 Después de ello se ejecutará el código “attrib -s -h /s /d” ya con la dirección de la unidad 
 Por ultimo se manda el mensaje Finalizado y seleccionas una tecla para terminar el proceso.
 
-
-Funcionamiento 
+       Funcionamiento 
 Para mostrar el funcionamiento del scrip, en este caso tomaremos una memoria con archivos ocultos.  
-Como le ven en la imagen anterior se ve que la memoria tiene pocos archivos
-Pero cuando la abrimos  
-Vemos que no hay ningún archivo por lo que al ejecutar el programa él se abrirá una pantalla, con el nombre de “Desocultador carpetas y archivos”, el cual tendrá un color de fondo azul con letras verdes, el cual como primeros mensajes saldrá, el creador y la unidad que desean reparar.  
+Al ejecutar el programa se abrirá una pantalla, con el nombre de “Desocultador carpetas y archivos”, el cual tendrá un color de fondo azul con letras verdes, el cual como primeros mensajes saldrá, el creador y la unidad que desean reparar.  
 Delante de este último tendrás que colocar la letra de la unidad y dar un enter  
 El cual lanzara el siguiente mensaje:
 “Espere un momento porfavor”
@@ -92,7 +88,7 @@ Finalmente, se desocultaran nuestros archivos de la memoria.
  
 
  
-Cambiar el icono de un archivo.bat
+                                             Cambiar el icono de un archivo.bat
 Para poder cambiar el icono de un archivo.bat.
 Lo primero que se tiene que hacer es crear un acceso directo de este: 
 Luego una vez creado el acceso, sobre este das clic derecho sobre él, propiedades. 
@@ -102,7 +98,7 @@ Finalmente seleccionas tu icono y listo
 
 
 
-Temporizador y sonido Audible
+                                                Temporizador y sonido Audible
 Par el temporizador tuvimos que hacer una pequeña aplicación para este, lo cual lo programamos desde NetBeans.
 Primero creamos un proyecto. 
 Posteriormente le dimos nombre y lo guardamos, luego ingresamos a nuestro paquete principal y creamos JFrameForm. 
@@ -121,7 +117,7 @@ ObjVoice.speak StrText
 
 
 
-Cambio de Fuente
+                                                         Cambio de Fuente
 
 El cambio de fuente de Windows, al igual que lo anterior, con una serie de comandos que al colocarlos en un bloc de notas, y guardarlos ahora en un archivo.reg, el cual la serie de comandos es:
 Windows Registry Editor Version 5.00
@@ -137,7 +133,7 @@ Windows Registry Editor Version 5.00
 "Segoe UI"="Tahoma"
 
  
-Encender la cámara web sin que el usuario se dé cuenta.
+                               Encender la cámara web sin que el usuario se dé cuenta.
 Para ello necesitamos una aplicación para poder realizar este proceso, y antes debemos desactivar nuestro antivirus ya que si la ejecutamos sin desactivar nuestro antivirus, esta borrara la aplicación.
 Una vez desactivando el antivirus, ejecutamos la aplicación llamada Cammy.
 Posteriormente das permisos.
@@ -150,5 +146,6 @@ Pero el que nos interesa realmente es el ejecutable que nos creó, ya que este c
 El cual al abrir el cammy en la tabla se nos va a aparecer quien se conectó:
 Y con ello podemos acceder a la cámara y pantalla de escritorio de la computadora en el que se ejecuto el archivo.
 
-Color del mensaje.
+
+                                                        Color del mensaje.
 Para cambiar el color del mensaje lo que tienes que hacer es ir configuración del equipo, a personalización, en ese apartado te vas a colores y seleccionas el color de tema.
